@@ -338,8 +338,7 @@ def stats_section(playlists):
     top_artist = stats["top_artist"]
     if top_artist:
         st.write(
-            f"Most common artist: {top_artist} "
-            f"({stats['top_artist_count']} songs)"
+            f"Most common artist: {top_artist} ({stats['top_artist_count']} songs)"
         )
     else:
         st.write("No top artist yet.")
@@ -360,9 +359,7 @@ def history_section():
     show_details = st.checkbox("Show full history")
     if show_details:
         for song in history:
-            st.write(
-                f"{song.get('mood', '?')}: {song['title']} by {song['artist']}"
-            )
+            st.write(f"{song.get('mood', '?')}: {song['title']} by {song['artist']}")
 
 
 def clear_controls():
